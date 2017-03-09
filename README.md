@@ -7,14 +7,18 @@ Why Spark?
 
 The following command starts a container with the Notebook server listening for HTTP connections on port 8888.
 ```
-docker run -it --rm -p 8888:8888 -v $PWD/notebooks:/home/jovyan/work --name tf-idf jupyter/pyspark-notebook start-notebook.sh --NotebookApp.token=''
+docker run -it --rm -p 8888:8888 \
+  -v $PWD/notebooks:/home/jovyan/work \
+  --name tf-idf jupyter/pyspark-notebook start-notebook.sh --NotebookApp.token=''
 ```
 
 ## Use
 
 As best practice to save notebooks persistently run the container as a daemon so you don't have to CTRL+C to quit and can instead let docker handle the state.
 ```
-docker run -td -p 8888:8888 -v $PWD/notebooks:/home/jovyan/work --name tf-idf jupyter/pyspark-notebook start-notebook.sh --NotebookApp.token=''
+docker run -td -p 8888:8888 \
+  -v $PWD/notebooks:/home/jovyan/work \
+  --name tf-idf jupyter/pyspark-notebook start-notebook.sh --NotebookApp.token=''
 ```
 
 # Stop
