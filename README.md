@@ -44,6 +44,14 @@ This tutorial is only for showcase and not recommended for production due no enc
 
 ## Content
 
+# Notebooks
+
+* [Get Started: count](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/count.ipynb) - Count Wikidata Rows
+* [process Wikidata](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/wikidata_as_inlined_json_subset.ipynb)
+* [JSON schema](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/json_schema.ipynb)
+* [processing JSON](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/reduce_json.ipynb)
+
+
 # TF-IDF
 
 ```python
@@ -69,7 +77,7 @@ tfidfIgnore = idfIgnore.transform(tf)
 * [Documentation](https://docs.docker.com/) - Get Started
 * [Linux post install steps](https://docs.docker.com/engine/installation/linux/linux-postinstall/#systemd)
 * [pyspark-notebook](https://hub.docker.com/r/jupyter/pyspark-notebook/) - containerized dependencies (spark, python, ...)
-* [Blog Post](http://maxmelnick.com/2016/06/04/spark-docker.html) - Blog post about pyspark-notebook
+* [Blog Post](http://maxmelnick.com/2016/06/04/spark-docker.html) - Blog Post about pyspark-notebook
 
 # Spark
 * [Apache Spark](https://spark.apache.org/)
