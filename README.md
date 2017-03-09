@@ -1,6 +1,7 @@
-## Disclaimer
+## Motivation
+Why Spark?
 
-This tutorial is only for showcase and not recommended for production due no encription is used.
+[Apache Spark](https://spark.apache.org/) is a fast and general engine for large-scale data processing.
 
 ## Test
 
@@ -32,19 +33,44 @@ Remove docker container.
 docker rm tf-idf
 ```
 
+## Disclaimer
+
+This tutorial is only for showcase and not recommended for production due no encription is used.
+
+
+## Content
+
+# TF-IDF
+
+```python
+from pyspark.mllib.feature import HashingTF, IDF
+
+#documents
+
+hashingTF = HashingTF()
+tf = hashingTF.transform(documents)
+
+tf.cache()
+idf = IDF().fit(tf)
+tfidf = idf.transform(tf)
+
+idfIgnore = IDF(minDocFreq=2).fit(tf)
+tfidfIgnore = idfIgnore.transform(tf)
+```
+
 ## Resources
-* https://docs.docker.com/engine/installation/linux/linux-postinstall/#systemd
-* http://maxmelnick.com/2016/06/04/spark-docker.html
-* https://sparktutorials.github.io/2015/04/14/getting-started-with-spark-and-docker.html
-* https://www.google.com/about/appsecurity/reward-program/
-* https://security.googleblog.com/2017/03/vrp-news-from-nullcon.html
-* https://futurezone.at/digital-life/spammer-panne-1-37-milliarden-datensaetze-im-web/250.265.208
-* http://www.csoonline.com/article/3176433/security/spammers-expose-their-entire-operation-through-bad-backups.html
-* https://github.com/jupyter/docker-stacks/tree/master/pyspark-notebook
-* http://spark.apache.org/docs/latest/quick-start.html
-* http://interactive.blockdiag.com/
-* http://stackoverflow.com/questions/36756907/tensorflow-on-docker-how-to-save-the-work-on-jupyter-notebook
-* https://spark.apache.org/docs/latest/mllib-feature-extraction.html
-* https://spark.apache.org/docs/latest/ml-features.html#tf-idf
-* https://spark.apache.org/docs/latest/ml-classification-regression.html
-* https://www.wikidata.org/wiki/Wikidata:Database_download/de
+
+# Docker
+
+* [Documentation](https://docs.docker.com/) - Get Started
+* [Linux post install steps](https://docs.docker.com/engine/installation/linux/linux-postinstall/#systemd)
+* [pyspark-notebook](https://hub.docker.com/r/jupyter/pyspark-notebook/) - containerized dependencies (spark, python, ...)
+* [Blog Post](http://maxmelnick.com/2016/06/04/spark-docker.html) - Blog post about pyspark-notebook
+
+# Spark
+* [Apache Spark](https://spark.apache.org/)
+* [Quick Start](http://spark.apache.org/docs/latest/quick-start.html)
+* [TF-IDF](https://spark.apache.org/docs/latest/mllib-feature-extraction.html#tf-idf) - ML library
+
+# Wikidata
+* [Dumps](https://www.wikidata.org/wiki/Wikidata:Database_download/de)
