@@ -74,6 +74,8 @@ This tutorial is only for showcase and not recommended for production due no enc
 
 # TF-IDF
 
+Code snippet from Apache Spark documentation [TF-IDF](https://spark.apache.org/docs/latest/mllib-feature-extraction.html#tf-idf)
+
 ```python
 from pyspark.mllib.feature import HashingTF, IDF
 
