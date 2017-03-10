@@ -47,7 +47,7 @@ This tutorial is only for showcase and not recommended for production due no enc
 
 * [Get Started: count](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/count.ipynb) - Count Wikidata Rows
 * [process Wikidata](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/wikidata_as_inlined_json_subset.ipynb) - Extract a tiny wikidata subset for testbed
-* [page sample](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/wikidata_as_inlined_json_subset.ipynb) - sample JSON Object of a wiki page
+* [page sample](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/sample_wikidata_json.ipynb) - sample JSON Object of a wiki page
 * [JSON schema](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/json_schema.ipynb) - Get the JSON schema from subset
 * [processing JSON](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/reduce_json.ipynb) - Process wikidata subset (get label and description)
 * [TF-IDF](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/reduce_json.ipynb) - Process wikidata subset (get label and description)
