@@ -1,4 +1,4 @@
-## Motivation
+# Motivation
 Why Spark?
 
 [Apache Spark](https://spark.apache.org/) is a fast and general engine for large-scale data processing.
@@ -21,17 +21,17 @@ docker run -td -p 8888:8888 \
   --name tf-idf jupyter/pyspark-notebook start-notebook.sh --NotebookApp.token=''
 ```
 
-# Stop
+## Stop
 ```
 docker stop tf-idf
 ```
 
-# Start
+## Start
 ```
 docker start tf-idf
 ```
 
-# Remove
+## Remove
 Remove docker container.
 ```
 docker rm tf-idf
@@ -42,14 +42,15 @@ docker rm tf-idf
 This tutorial is only for showcase and not recommended for production due no encription is used.
 
 
-## Content
+# Content
 
-# Notebooks
+## Notebooks
 
 * [Get Started: count](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/count.ipynb) - Count Wikidata Rows
-* [process Wikidata](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/wikidata_as_inlined_json_subset.ipynb)
-* [JSON schema](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/json_schema.ipynb)
-* [processing JSON](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/reduce_json.ipynb)
+* [process Wikidata](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/wikidata_as_inlined_json_subset.ipynb) - Extract a tiny wikidata subset for testbed
+* [JSON schema](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/json_schema.ipynb) - Get the JSON schema from subset
+* [processing JSON](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/reduce_json.ipynb) - Process wikidata subset (get label and description)
+* [TF-IDF](https://github.com/n4group/tf-idf-python-spark-tutorial/blob/master/notebooks/reduce_json.ipynb) - Process wikidata subset (get label and description)
 
 
 # TF-IDF
@@ -70,19 +71,19 @@ idfIgnore = IDF(minDocFreq=2).fit(tf)
 tfidfIgnore = idfIgnore.transform(tf)
 ```
 
-## Resources
+# Resources
 
-# Docker
+## Docker
 
 * [Documentation](https://docs.docker.com/) - Get Started
 * [Linux post install steps](https://docs.docker.com/engine/installation/linux/linux-postinstall/#systemd)
 * [pyspark-notebook](https://hub.docker.com/r/jupyter/pyspark-notebook/) - containerized dependencies (spark, python, ...)
 * [Blog Post](http://maxmelnick.com/2016/06/04/spark-docker.html) - Blog Post about pyspark-notebook
 
-# Spark
+## Spark
 * [Apache Spark](https://spark.apache.org/)
 * [Quick Start](http://spark.apache.org/docs/latest/quick-start.html)
 * [TF-IDF](https://spark.apache.org/docs/latest/mllib-feature-extraction.html#tf-idf) - ML library
 
-# Wikidata
-* [Dumps](https://www.wikidata.org/wiki/Wikidata:Database_download/de)
+## Wikidata
+* [Dumps](https://www.wikidata.org/wiki/Wikidata:Database_download/en)
