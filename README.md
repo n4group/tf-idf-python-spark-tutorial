@@ -89,3 +89,7 @@ tfidf = idf.transform(tf)
 idfIgnore = IDF(minDocFreq=2).fit(tf)
 tfidfIgnore = idfIgnore.transform(tf)
 ```
+
+## License
+
+MIT © [n4group](https://github.com/n4group)
